@@ -1,5 +1,11 @@
+import NotFound from "@/app/not-found";
+
 export default function ProductDetailPage({ params }: { params: { productId: string } }) {
   const { productId } = params;
+
+  if (parseInt(productId)> 100) {
+    (NotFound());
+  }
 
   return (
     <>
